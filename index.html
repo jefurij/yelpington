@@ -1,18 +1,38 @@
-<script>
-let name = document.location.pathname.slice(1);
+<!DOCTYPE html>
+<html lang="en">
 
-if (!name) {
-  console.log("no place name specfied");
-} else {
-  console.log("fetching place named '" + name + "'");
 
-  fetch(name + '.json')
-    .then(function (response) {
-      return response.text();
-    })
-    .then(function (myText) {
-      console.log(myText);
-    });
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-</script>
+  <title>yelpngton!</title>
+
+  <link href="index.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+
+</head>
+<h1>Yelpington!</h1>
+
+<body>
+
+  <div id="map"></div>
+
+    <div id="addResturant">
+      <p>resturants added</p>
+
+    </div>
+
+  <script src="./index.js"></script>
+
+</body>
+
+</html>
+
