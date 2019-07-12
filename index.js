@@ -22,8 +22,6 @@ fetch("all.json")
 
 
 function addResturants(displayResturant) {
-    //console.log(displayResturant);
-
     const resturant = document.getElementById('addResturant')
     const resturantName = document.createElement('h2')
     const resturantStreet = document.createElement('h5')
@@ -51,7 +49,7 @@ function addResturants(displayResturant) {
      resturant.appendChild(resturantEmail)
      resturant.appendChild(resturantWebsite)
      resturant.appendChild(resturantHours)
-    console.log('dispresturant', displayResturant);
+
      addMarkers(displayResturant);
 }
 function addMarkers(restaurant){
