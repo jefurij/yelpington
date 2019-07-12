@@ -54,6 +54,11 @@ function addResturants(displayResturant) {
 }
 function addMarkers(restaurant){
     console.log('running addMarkers')
+    if(restaurant.address.includes("05401")){
+    }else{
+        restaurant.address += " 05401";
+    }
+
     fetch(`https://nominatim.openstreetmap.org/search/?q=${restaurant.address}&format=json`)
     .then(response => { return response.json() } ) 
     .then(json => {
